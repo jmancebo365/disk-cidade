@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import './NewSugestao.css';
 import { SugestoesContext } from '../../context/SugestoesProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from '../../components/Header/Header.js';
 
 
 const NewSugestao = () => {
@@ -9,16 +10,19 @@ const NewSugestao = () => {
     const{ onSugestoesSubmit } = useContext(SugestoesContext);
 
     return (
+        <div>
+        <Header />
         <div className="formulario">
             <h1>Nova Sugestão</h1>
             <form onSubmit={onSugestoesSubmit}>
             <div className="form-group" >
-                <label for="exampleFormControlInput1">Titulo</label>
-                <input type="email" class="form-control" id="titulo" placeholder="Lombada na rua 13" />
+                <input type="email" class="form-control" id="titulo" placeholder="Titulo" />
             </div>
+            <br />
          
             <div class="form-group">
-                <label for="exampleFormControlSelect1">UF</label>
+                <input type="email" class="form-control" id="cidade" placeholder="Cidade" />
+                <br />
                 <select class="form-control" id="uf">
                 <option>SP</option>
                 <option>MG</option>
@@ -26,23 +30,21 @@ const NewSugestao = () => {
                 <option>BA</option>
                 <option>CE</option>
                 </select>
-                <label for="exampleFormControlInput1">Cidade</label>
-                <input type="email" class="form-control" id="cidade" placeholder="Valinhos" />
             </div>
-        
+            <br />
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Descrição</label>
-                <textarea class="form-control" id="descricao" rows="3"></textarea>
+                <textarea class="form-control" id="descricao" rows="3" placeholder="Escreva sua sugestão..."></textarea>
             </div>
+            <br />
             <div className="form-group" >
-                <label for="exampleFormControlInput1">Url Imagem</label>
-                <input type="email" class="form-control" id="urlImagem" placeholder="url" />
+                <input type="email" class="form-control" id="urlImagem" placeholder="URL Imagem" />
             </div>
-            <input className="btn" type="submit" value="Cadastrar" />
+            <input type="submit" value="Cadastrar"/>
             </form>
 
 
           
+        </div>
         </div>
     )
 }

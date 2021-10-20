@@ -1,0 +1,43 @@
+.Sugestao{
+    padding: 20px;
+    background-color: rgb(212, 212, 212);
+
+    width: min-content;
+    margin:10px auto ;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}
+
+
+.imgSugestao{
+    border-radius: 10px;
+    max-width: 40em;
+}
+.Sugestao .linha .nomeUsuario{
+    font-size: 15px;
+    color: rgb(233, 130, 47);
+    font-weight: bolder;
+}
+.Sugestao .linha p{
+    margin:0;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+  
+}
+.icon{
+    width: 70px;
+    
+}
+.descricao{
+    color:black;
+}
+.escrita{
+    margin-left: 20px;
+}
+.linha{
+    display: flex;
+    text-align:justify;
+    margin:10px;
+}

@@ -1,0 +1,18 @@
+.Perfil p{
+ color: black;
+}
+
+.Perfil h1{
+color: black;
+margin-top: 80px;
+}
+
+.Perfil{
+    margin:5% auto;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    max-width: 20%;
+    border-radius: 10px;
+    padding: 5px 20px;
+
+}

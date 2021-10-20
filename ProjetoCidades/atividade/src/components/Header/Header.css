@@ -4,11 +4,19 @@ Header ul{
     padding: 0;
     width: 100%;
     text-align: center;
+    background-color: rgb(223, 223, 223);
 }
 
 .Header li{
     display: inline-block;
     margin: 20px;
+}
+.nomeApp{
+    margin: 0;
+    font-family:Trebuchet MS, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: rgb(233, 130, 47);
 }
 
 .Header a{
@@ -19,5 +27,9 @@ Header ul{
 .Header a:hover,
 .Header a:active,
 .Header a.active{
-    color: orange;
+    color:  rgb(233, 130, 47);
+}
+
+.logo{
+    width: 30px;
 }

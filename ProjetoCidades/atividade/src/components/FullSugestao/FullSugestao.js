@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 
 const FullSugestao = () => {
 
-    const {idSugestao} = useParams();
+    const {id} = useParams();
+    console.log(id);
 
     useEffect(() => {
 
     }, [])
-
     return(
         <div>
-            <p>Livro específico {idSugestao}</p>
+            <p style={{color:'white'}}>Exibir sugestão de index: {id}</p> 
         </div>
     )
 }
