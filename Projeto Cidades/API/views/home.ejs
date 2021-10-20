@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8" />
+	<title>Museu Virtual</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+			  <a class="nav-link" href="fotos">Fotos</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="tarsila">Tarsila</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="portinari">Portinari</a>
+			</li>
+
+		  </ul>
+
+		<h1> Obras de arte</h1>
+		<% for(let i=0; i<obrasdearte.length; i++) { %>
+		
+		<div class="card" style="width: 18rem;">
+			<img src="<%= obrasdearte[i].urlimagem %>" class="card-img-top" alt="<%= obrasdearte[i].nome %>">
+			<div class="card-body">
+			  <h5 class="card-title"><%= obrasdearte[i].nome %></h5>
+			  <p class="card-text"><%= obrasdearte[i].artista %></p>
+			</div>
+		  </div>
+		  <% } %>
+	</div>
+</body>
+</html>
