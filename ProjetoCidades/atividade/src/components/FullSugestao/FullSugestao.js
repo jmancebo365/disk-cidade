@@ -1,10 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const FullSugestao = () => {
 
     const {id} = useParams();
-    console.log(id);
+
 
     useEffect(() => {
 

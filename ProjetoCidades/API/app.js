@@ -8,7 +8,21 @@ app.get('/usuarios', function(req,res){
 
     let sql = 'select * from usuario';
     connection.query(sql, function (error, result) {
-    console.log(result);
+   
+    res.json(result);
+    });
+})
+
+app.get('/login/:email/:senha', function(req,res){
+    
+    const email = req.params.email;
+    const senha = req.params.senha;
+
+    let connection = dbConnection();
+
+    let sql = `select * from usuario where email='`+ email +`' and senha='`+ senha +`'`;
+    connection.query(sql, function (error, result) {
+   
     res.json(result);
     });
 })
@@ -19,7 +33,7 @@ app.get('/sugestoes', function(req,res){
 
     let sql = "select s.idSugestao, s.descricao,s.data, s.urlImagem,s.cidade,s.UF,s.titulo, u.nome as 'usuario' from sugestao s, usuario u where s.idUsuario = u.idUsuario;";
     connection.query(sql, function (error, result) {
-    console.log(result);
+  
     res.json(result);
     });
 })
