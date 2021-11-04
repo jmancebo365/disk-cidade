@@ -18,7 +18,7 @@ const UsuarioProvider = (props) => {
   console.log(user);
 
 const onLogin = (event) => {
-
+    console.log("entrou");
     if(event.length !== 0){
         const newUser = event[0];
         setUser(newUser);

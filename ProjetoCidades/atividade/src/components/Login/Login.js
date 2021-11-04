@@ -6,10 +6,10 @@ const Login = () =>{
 
     
     function VerificaLogin(){
-        const{ user } = useContext(UsuarioContext);
+        const{ user, onLogin } = useContext(UsuarioContext);
         if(user != null){
             console.log("ta logado" + user);
-        
+            onLogin(user);
         }
         else{
             console.log("deu ero");

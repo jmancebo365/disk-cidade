@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../../components/Header/Header.js';
 import './Perfil.css';
@@ -7,8 +7,12 @@ import { UsuarioContext } from '../../context/UsuarioProvider';
 
 
 const Perfil = () => {
-
-    const{ user } = useContext(UsuarioContext);
+    
+    const { user, onLogin } = useContext(UsuarioContext);
+    
+    function Deslogar(){
+        onLogin([0]);
+    }
     console.log(user);
     if(user != null){
         return (
@@ -21,7 +25,7 @@ const Perfil = () => {
             <p> Email: {user.email}</p>
             <p> Cidade: {user.cidadeNatal} </p>
             <p> UF: {user.UFCidadeNatal} </p>
-            <NavLink to="/login" exact><input type="button" value="Deslogar"/></NavLink>
+            <NavLink to="/login" exact><input type="button" onClick={Deslogar()} value="Deslogar"/></NavLink>
             </div>
             </div>
         )
